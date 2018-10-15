@@ -54,3 +54,17 @@ console.log(pluralizer('casa', 0))
 /* expected output
 "5 cats" or "1 dog".
 */
+
+// expected output 'success'
+// expected output s: 3, u: 1, e:1 c: 2
+
+const counter = (str) => {
+  const myArray = str.split('')
+  const mySet = new Set(myArray)
+  return mySet
+}
+
+console.log(counter('success'))
+
+// expected output 'success'
+// s u c e
