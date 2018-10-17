@@ -55,31 +55,6 @@ console.log(pluralizer('casa', 0))
 "5 cats" or "1 dog".
 */
 
-// const counter = (str) => { ---------------------------------->>>>>
-//   for (let i = 0; i < str.length; i++) {
-
-//     const elem = str[i]
-//     const count = str[i].match(elem).length
-
-//     const res = count + ' : ' + elem
-//     console.log(res)
-//   }
-// }
-
-
-// console.log(counter('success'))
-
-// var temp = "This is a string.";
-// for (let i = 0; i < temp.length; i++) {
-
-// }
-
-// var count = (temp.match(/i/g) || []).length;
-// console.log(count);
-
-// expected output 'success'
-// expected output s: 3, u: 1, e:1 c: 2
-
 const uniqueLetters = (str) => {
   const myArray = str.split('')
   const mySet = new Set(myArray)
@@ -160,9 +135,68 @@ console.log(sumOfNumbersWithForLoop());
 // expected output. The sum of all numbers in for loop -->> 210
 
 
+// Write a JavaScript function to find the first not repeated character. Go to the editor
+// Sample arguments : 'abacddbec' 
+// // Expected output : 'e' 
+
+const firstNotRepeatedChar = (str)  => {
+  let result = ''
+  let arr = str.split('')
+  let repeatedChar = 0
+ 
+  for (let x = 0; x < arr.length; x++) {
+    repeatedChar = 0
+    for (let y = 0; y < arr.length; y++) {
+
+      arr[x] === arr[y] ? repeatedChar += 1 : null
+
+    }
+
+    repeatedChar < 2 ? result = arr[x] : null
+
+  }
+  return result
+}
+
+console.log(firstNotRepeatedChar('abacddbec'));
 
 
+// fizz buzz
+// expected aoutput
+// print fizz when number is multiple of 2, print buzz when number is multiple of 5
+// print fizz buzz when number is multiple of 15
 
 
+const fizzBuzz = () => {
+for (let i = 1; i <= 100; i++) {
+  if (i % 15 === 0) {
+    console.log('Hi');
+    
+    } else if (i % 5 === 0) {
+      console.log('there');
+      
+    } else if (i % 3 === 0) {
+      console.log('!');
+      
+    } else {
+    
+      console.log(i); 
+    }
+  
+  }
+  
+}
+
+console.log(fizzBuzz());
+
+
+// Write a JavaScript function that accepts two arguments, a string and a letter and the function will 
+// // count the number of occurrences of the specified letter within the string. Go to the editor
+// Sample arguments : 'w3resource.com', 'o' 
+// Expected output : 2 
+// Click me to see the s
+
+
+// Write a JavaScript function to  get the number of occurrences of each letter in specified string
 
 
