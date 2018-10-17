@@ -55,27 +55,27 @@ console.log(pluralizer('casa', 0))
 "5 cats" or "1 dog".
 */
 
-const counter = (str) => {
-  for (let i = 0; i < str.length; i++) {
+// const counter = (str) => { ---------------------------------->>>>>
+//   for (let i = 0; i < str.length; i++) {
 
-    const elem = str[i]
-    const count = str[i].match(elem).length
+//     const elem = str[i]
+//     const count = str[i].match(elem).length
 
-    const res = count + ' : ' + elem
-    console.log(res)
-  }
-}
+//     const res = count + ' : ' + elem
+//     console.log(res)
+//   }
+// }
 
 
-console.log(counter('success'))
+// console.log(counter('success'))
 
-var temp = "This is a string.";
-for (let i = 0; i < temp.length; i++) {
+// var temp = "This is a string.";
+// for (let i = 0; i < temp.length; i++) {
 
-}
+// }
 
-var count = (temp.match(/i/g) || []).length;
-console.log(count);
+// var count = (temp.match(/i/g) || []).length;
+// console.log(count);
 
 // expected output 'success'
 // expected output s: 3, u: 1, e:1 c: 2
@@ -99,6 +99,7 @@ const uniqueNumbers = (arr) => {
 
 console.log(uniqueNumbers([1, 1, 3, 4, 5, 5, 5, 5, 8, 9, 0, 0, 0]))
 
+// return lenght of the 3 arguments in a function
 
 const argsLength = function (p1, p2, p3) {
   console.log(p1, p2, p3)
@@ -108,3 +109,60 @@ const argsLength = function (p1, p2, p3) {
 }
 
 argsLength()
+
+
+// Write a JavaScript function that accept a list of country names as input and returns the longest 
+// country name as output. Go to the editor 
+// Sample function : Longest_Country_Name(["Australia", "Germany", "United States of America"])
+
+const countries = [
+  'Mexico', 
+  'La Ciudad de Mexico es Maravillosa', 
+  'Canada', 
+  'Honduras', 
+  'United States of America', 
+  'Venezuela', 'Colombia'
+]
+
+const longestCountryName = (arr) => {
+   const longuestCountrie = arr.reduce((a, b) => {
+      if (a.length > b.length){
+        return a
+      } else {
+        return b
+      }
+   })
+   return longuestCountrie
+}
+
+console.log(longestCountryName(countries) );
+
+// // Expected output : "United States of America"
+
+const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20 ]
+
+const sumOfArray = (arr) => arr.reduce((x, y) => x + y)
+
+console.log(sumOfArray(numbers));
+
+// expected output. The sum of all numbers in array --->> 210
+
+const sumOfNumbersWithForLoop = () => {
+  total = 0
+  for (let i = 0; i <= 20; i++) {
+    total += i
+  }
+  return total
+}
+
+console.log(sumOfNumbersWithForLoop());
+
+// expected output. The sum of all numbers in for loop -->> 210
+
+
+
+
+
+
+
+
