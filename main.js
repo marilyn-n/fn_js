@@ -10,7 +10,7 @@ console.log(greaterNum(9, 8))
 console.log(greaterNum(3, 5))
 
 
-/* expected 
+/* expected output
 output The greater number of 5 and 10 is 10.
 */
 
@@ -84,7 +84,6 @@ const argsLength = function (p1, p2, p3) {
 }
 
 argsLength()
-
 
 // Write a JavaScript function that accept a list of country names as input and returns the longest 
 // country name as output. Go to the editor 
@@ -162,8 +161,8 @@ console.log(firstNotRepeatedChar('abacddbec'));
 
 
 // fizz buzz
-// expected aoutput
-// print fizz when number is multiple of 2, print buzz when number is multiple of 5
+// expected output
+// print fizz when number is multiple of 3, print buzz when number is multiple of 5
 // print fizz buzz when number is multiple of 15
 
 
@@ -191,7 +190,7 @@ console.log(fizzBuzz());
 
 
 // Write a JavaScript function that accepts two arguments, a string and a letter and the function will 
-// // count the number of occurrences of the specified letter within the string. Go to the editor
+// count the number of occurrences of the specified letter within the string. Go to the editor
 // Sample arguments : 'w3resource.com', 'o' 
 // Expected output : 2 
 // Click me to see the s
@@ -199,4 +198,27 @@ console.log(fizzBuzz());
 
 // Write a JavaScript function to  get the number of occurrences of each letter in specified string
 
+
+// Write a function that checks if a string its palindrome or not
+
+// expected outout ---> oso ---> It's a palindrome!
+
+console.log('----------------------->>>');
+
+
+const isPalindrome = (str) => {
+  const reversed = str.split('').reverse().join('')
+  
+  if (str === reversed ) {
+    return `${str} true`
+  } else {
+    return `${str} false`
+     
+  }
+}
+
+console.log(isPalindrome('roma')) // false
+console.log(isPalindrome('oso')) // true
+console.log(isPalindrome('luis')) // false
+console.log(isPalindrome('aaa')) // true
 
